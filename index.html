@@ -21,7 +21,7 @@
           <i @click="prevImage" class="fas fa-chevron-left"></i>
         </div>
         <div class="carousel-images">
-          <img src="img/lago.jpeg" alt="">
+          <img :src="images[position].img" alt="images[position].titolo">
         </div>
         <div class="carousel-next">
          <i @click="nextImage" class="fas fa-chevron-right"></i>
