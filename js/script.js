@@ -9,7 +9,7 @@ var app = new Vue(
         },
         {
           titolo: "mare",
-          img: "img/lago.jpeg"
+          img: "img/mare.jpeg"
         },
         {
           titolo: "montagna",
@@ -18,5 +18,21 @@ var app = new Vue(
       ],
       position: 0
     },
+    methods: {
+      nextImage: function(){
+        this.position++;
+
+        if (this.position > this.images.length) {
+          this.position = 0;
+        }
+      },
+      prevImage: function(){
+        this.position--;
+
+        if (this.position < 0 ) {
+          this.position = this.images.length - 1;
+        }
+      },
+    }
   }
 );
