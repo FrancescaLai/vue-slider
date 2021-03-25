@@ -13,7 +13,6 @@
 .carousel{
   width: 800px;
   height: 400px;
-  background-color: #FD1802;
   display: flex;
   align-items: center;
   margin: auto;
@@ -35,7 +34,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 5px;
-  color: #FDEDF8;
+  color: #FD1802;
 }
 
 .bullets{
@@ -48,9 +47,9 @@
 }
 
 .bullets i{
-  color: #FD1802;
+  color: #ffff;
 }
 
 .bullets .active{
-  color: #fff;
+  color: #FD1802;
 }

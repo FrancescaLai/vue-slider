@@ -13,7 +13,7 @@ var app = new Vue(
         },
         {
           titolo: "montagna",
-          img: "img/lago.jpeg"
+          img: "img/montagna.jpg"
         }
       ],
       position: 0
