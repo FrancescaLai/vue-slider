@@ -27,7 +27,7 @@
          <i @click="nextImage" class="fas fa-chevron-right"></i>
         </div>
         <div class="bullets">
-          <i class="fas fa-circle" v-for="(image, index) in images"></i>
+          <i class="fas fa-circle" v-for="(image, index) in images" :class="position == index ? `active` : `` "></i>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@
   font-size: 20px;
   cursor: pointer;
   padding: 5px;
-  color: #FD1802;
+  color: #FDEDF8;
 }
 
 .bullets{
@@ -45,4 +45,12 @@
   transform: translateX(-50%);
   padding: 20px;
   border-radius: 50%;
+}
+
+.bullets i{
+  color: #FD1802;
+}
+
+.bullets .active{
+  color: #fff;
 }

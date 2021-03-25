@@ -22,7 +22,7 @@ var app = new Vue(
       nextImage: function(){
         this.position++;
 
-        if (this.position > this.images.length) {
+        if (this.position == this.images.length) {
           this.position = 0;
         }
       },
