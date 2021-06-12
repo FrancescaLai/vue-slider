@@ -13,7 +13,7 @@ body{
 
 /* Typo */
 h1{
-  font-size: 25px;
+  font-size: 50px;
   margin-right: 25px;
 }
 
@@ -59,6 +59,7 @@ h1{
 /* Carousel */
 .carousel{
   padding-top: 30px;
+  width: 90%;
   height: 600px;
   display: flex;
   align-items: center;
@@ -78,22 +79,21 @@ h1{
 }
 
 .carousel i{
-  font-size: 20px;
   cursor: pointer;
-  padding: 5px;
+  padding: 0px 15px;
   color: black;
 }
 
 .bullets{
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-  transform: translateX(-50%);
+  text-align: center;
   border-radius: 50%;
+  padding-top: 20px;
 }
 
 .bullets i{
-  color: #ffff;
+  font-size: 20px;
+  color: black;
+  padding: 0px 5px;
 }
 
 .bullets .active{

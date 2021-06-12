@@ -21,7 +21,7 @@
   <header>
     <nav class="top-navbar">
       <div class="navbar">
-        <h1>SAMPLE JAM</h1>
+        <h1>☹</h1>
         <ul>
           <li>Man</li>
           <li>Woman</li>
@@ -55,21 +55,20 @@
 
   <main>
     <div id="app">
-        <div class="carousel">
-          <div class="carousel-prev">
-            <i @click="prevImage" class="fas fa-chevron-left"></i>
-          </div>
-          <div class="carousel-images">
-            <img :src="images[position].img" alt="images[position].titolo">
-          </div>
-          <div class="carousel-next">
-           <i @click="nextImage" class="fas fa-chevron-right"></i>
-          </div>
-          <div class="bullets">
-            <i class="fas fa-circle" v-for="(image, index) in images" :class="position == index ? `active` : `` "></i>
-          </div>
+      <div class="carousel">
+        <div class="carousel-prev">
+          <i @click="prevImage" class="fas fa-chevron-left"></i>
         </div>
-
+        <div class="carousel-images">
+          <img :src="images[position].img" alt="images[position].titolo">
+        </div>
+        <div class="carousel-next">
+         <i @click="nextImage" class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="bullets">
+        <i class="fas fa-circle" v-for="(image, index) in images" :class="position == index ? `active` : `` "></i>
+      </div>
     </div>
   </main>
 
