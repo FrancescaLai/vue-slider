@@ -40,7 +40,19 @@ var app = new Vue(
         this.position = i;
         this.resetPlay();
       },
-      
+      resetPlay: function() {
+        clearInterval(this.timer);
+        this.play();
+      },
+      play: function() {
+        let app = this;
+        this.timer = setInterval(function() {
+          app.nextImage();
+        }, 2000);
+      },
+      created: function() {
+        this.play();
+      }
     }
   }
 );
