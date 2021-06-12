@@ -4,15 +4,62 @@
   box-sizing: border-box;
 }
 
-.carousel-wrapper{
-  height: 100vh;
-  background-color: #FDEDF8;
-  display: flex;
+body{
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
 }
 
+/* Typo */
+h1{
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+/* Common */
+.navbar{
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul{
+  list-style: none;
+  display: inline-flex;
+}
+
+.navbar ul li{
+  margin: 0px 10px;
+}
+/* Common */
+
+/* Top Navbar */
+.top-navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+  border-bottom: 1px solid black;
+}
+
+/* /Top Navbar */
+
+/* Bottom Navbar */
+
+.bottom-navbar{
+  padding: 15px 35px;
+}
+
+.bottom-navbar li:first-of-type{
+  margin-left: 0;
+}
+
+/* /Bottom Navbar */
+
+/* Carousel */
 .carousel{
-  width: 800px;
-  height: 400px;
+  padding-top: 30px;
+  height: 600px;
   display: flex;
   align-items: center;
   margin: auto;
@@ -34,15 +81,14 @@
   font-size: 20px;
   cursor: pointer;
   padding: 5px;
-  color: #FD1802;
+  color: black;
 }
 
 .bullets{
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 20%;
   transform: translateX(-50%);
-  padding: 20px;
   border-radius: 50%;
 }
 
@@ -52,4 +98,65 @@
 
 .bullets .active{
   color: #FD1802;
+}
+/* Carousel */
+
+/* Footer */
+footer{
+  padding: 20px 35px;
+  margin: 30px 0px;
+  border-top: 1px solid black;
+}
+
+.footer-section{
+  margin-right: 75px;
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  float: left;
+}
+
+.info ul{
+  list-style: none;
+  margin-top: 20px;
+}
+
+.info ul li{
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.newsletter-form{
+  float: right;
+  width: 25%;
+}
+
+.newsletter-form form{
+  margin-top: 20px;
+}
+
+.form-group, .form-check{
+  border-bottom: 1px solid;
+}
+
+form input{
+  border: 0px;
+  padding: 20px 0px 8px 0px;
+}
+
+footer button{
+  margin-top: 30px;
+  color: white;
+  background-color: black;
+  padding: 10px 35px;
+  border: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

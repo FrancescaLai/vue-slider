@@ -4,16 +4,16 @@ var app = new Vue(
     data: {
       images: [
         {
-          titolo: "lago",
-          img: "img/lago.jpeg"
+          titolo: "archivio",
+          img: "img/archivio.jpeg"
         },
         {
-          titolo: "mare",
-          img: "img/mare.jpeg"
+          titolo: "book",
+          img: "img/book.png"
         },
         {
-          titolo: "montagna",
-          img: "img/montagna.jpg"
+          titolo: "editorial",
+          img: "img/polo.png"
         }
       ],
       position: 0

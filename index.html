@@ -10,28 +10,117 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <title>Vue Carousel</title>
 </head>
 <body>
 
-  <div id="app">
-    <div class="carousel-wrapper">
-      <div class="carousel">
-        <div class="carousel-prev">
-          <i @click="prevImage" class="fas fa-chevron-left"></i>
+  <header>
+    <nav class="top-navbar">
+      <div class="navbar">
+        <h1>SAMPLE JAM</h1>
+        <ul>
+          <li>Man</li>
+          <li>Woman</li>
+          <li>Drops</li>
+          <li>Editorial</li>
+          <li>Archive</li>
+        </ul>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li>Search</li>
+          <li>Login</li>
+          <li>Wishlist</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="bottom-navbar">
+      <div class="navbar">
+        <ul>
+          <li>New in</li>
+          <li>Brands</li>
+          <li>Clothing</li>
+          <li>Accossories</li>
+          <li>Lifestyle</li>
+          <li>Sale</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="app">
+        <div class="carousel">
+          <div class="carousel-prev">
+            <i @click="prevImage" class="fas fa-chevron-left"></i>
+          </div>
+          <div class="carousel-images">
+            <img :src="images[position].img" alt="images[position].titolo">
+          </div>
+          <div class="carousel-next">
+           <i @click="nextImage" class="fas fa-chevron-right"></i>
+          </div>
+          <div class="bullets">
+            <i class="fas fa-circle" v-for="(image, index) in images" :class="position == index ? `active` : `` "></i>
+          </div>
         </div>
-        <div class="carousel-images">
-          <img :src="images[position].img" alt="images[position].titolo">
-        </div>
-        <div class="carousel-next">
-         <i @click="nextImage" class="fas fa-chevron-right"></i>
-        </div>
-        <div class="bullets">
-          <i class="fas fa-circle" v-for="(image, index) in images" :class="position == index ? `active` : `` "></i>
-        </div>
+
+    </div>
+  </main>
+
+  <footer class="clearfix">
+    <div class="info">
+      <div class="footer-section">
+        <h4>HELP</h4>
+        <ul>
+          <li>Order & Shipping</li>
+          <li>Returns</li>
+          <li>FAQs</li>
+          <li>Order Status</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li>Company</li>
+          <li>Contact</li>
+          <li>Stores</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>CONNECT</h4>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+          <li>Youtube</li>
+        </ul>
       </div>
     </div>
-  </div>
+    <div class="newsletter-form">
+      <h4>NEWSLETTER</h4>
+      <form>
+        <div class="form-group">
+          <label for="input-name"></label>
+          <input type="text" class="form-control" id="input-name" aria-describedby="emailHelp" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="input-lastname"></label>
+          <input type="text" class="form-control" id="input-lastname" placeholder="Last Name">
+        </div>
+        <div class="form-check">
+          <label for="input-email"></label>
+          <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+</form>
+    </div>
+  </footer>
 
 
   <script src="js/script.js" charset="utf-8"></script>
