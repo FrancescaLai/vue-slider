@@ -16,7 +16,8 @@ var app = new Vue(
           img: "img/polo.png"
         }
       ],
-      position: 0
+      position: 0,
+      timer: 0
     },
     methods: {
       nextImage: function(){
@@ -24,6 +25,7 @@ var app = new Vue(
 
         if (this.position == this.images.length) {
           this.position = 0;
+          this.resetPlay();
         }
       },
       prevImage: function(){
@@ -31,8 +33,14 @@ var app = new Vue(
 
         if (this.position < 0 ) {
           this.position = this.images.length - 1;
+          this.resetPlay();
         }
       },
+      selectSlide: function(i) {
+        this.position = i;
+        this.resetPlay();
+      },
+      
     }
   }
 );
