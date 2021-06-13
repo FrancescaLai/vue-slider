@@ -31,6 +31,10 @@ h1{
 .navbar ul li{
   margin: 0px 10px;
 }
+
+h1:hover, li:hover, button:hover, .bullets:hover{
+  cursor: pointer;
+}
 /* Common */
 
 /* Top Navbar */
