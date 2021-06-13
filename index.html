@@ -60,13 +60,13 @@
     <div id="app">
       <carousel class="carousel">
         <div class="carousel-prev">
-          <i @click="prevImage" class="fas fa-chevron-left"></i>
+          <i @click="clickPrevImage" class="fas fa-chevron-left"></i>
         </div>
         <div class="carousel-images">
           <img :src="images[position].img" alt="images[position].titolo">
         </div>
         <div class="carousel-next">
-         <i @click="nextImage" class="fas fa-chevron-right"></i>
+         <i @click="clickNextImage" class="fas fa-chevron-right"></i>
         </div>
       </carousel>
       <div class="bullets">

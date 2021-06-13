@@ -17,9 +17,10 @@ var app = new Vue(
         }
       ],
       position: 0,
+      autoplay: 0
     },
     mounted: function(){
-      setInterval(this.nextImage, 1500)
+      this.autoplay = setInterval(this.nextImage, 2000)
     },
     methods: {
       nextImage: function(){
@@ -27,7 +28,6 @@ var app = new Vue(
 
         if (this.position >= this.images.length) {
           this.position = 0;
-
         }
       },
       prevImage: function(){
@@ -35,9 +35,23 @@ var app = new Vue(
 
         if (this.position < 0 ) {
           this.position = this.images.length - 1;
-
         }
-      }
+      },
+      resetAutoplay: function(){
+        clearInterval(this.autoplay);
+      },
+      clickNextImage: function(){
+        this.nextImage();
+        clearInterval(this.autoplay);
+      },
+      clickPrevImage: function(){
+        this.prevImage();
+        clearInterval(this.autoplay);
+      },
+      selectImage: function(i) {
+        this.position = i;
+        clearInterval(this.autoplay);
+      },
     }
   }
 );
