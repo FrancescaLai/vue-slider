@@ -17,15 +17,17 @@ var app = new Vue(
         }
       ],
       position: 0,
-      timer: 0
+    },
+    mounted: function(){
+      setInterval(this.nextImage, 1500)
     },
     methods: {
       nextImage: function(){
         this.position++;
 
-        if (this.position == this.images.length) {
+        if (this.position >= this.images.length) {
           this.position = 0;
-          this.resetPlay();
+
         }
       },
       prevImage: function(){
@@ -33,25 +35,8 @@ var app = new Vue(
 
         if (this.position < 0 ) {
           this.position = this.images.length - 1;
-          this.resetPlay();
+
         }
-      },
-      selectSlide: function(i) {
-        this.position = i;
-        this.resetPlay();
-      },
-      resetPlay: function() {
-        clearInterval(this.timer);
-        this.play();
-      },
-      play: function() {
-        let app = this;
-        this.timer = setInterval(function() {
-          app.nextImage();
-        }, 2000);
-      },
-      created: function() {
-        this.play();
       }
     }
   }

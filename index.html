@@ -58,7 +58,7 @@
 
   <main>
     <div id="app">
-      <div class="carousel">
+      <carousel class="carousel">
         <div class="carousel-prev">
           <i @click="prevImage" class="fas fa-chevron-left"></i>
         </div>
@@ -68,9 +68,9 @@
         <div class="carousel-next">
          <i @click="nextImage" class="fas fa-chevron-right"></i>
         </div>
-      </div>
+      </carousel>
       <div class="bullets">
-        <i class="fas fa-circle" v-for="(image, index) in images" @click="selectSlide(index)" :class="position == index ? `active` : `` "></i>
+        <i class="fas fa-circle" v-for="(image, index) in images" @click="selectImage(index)" :class="position == index ? `active` : `` "></i>
       </div>
     </div>
   </main>
@@ -120,7 +120,7 @@
           <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Email">
         </div>
         <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
-</form>
+      </form>
     </div>
   </footer>
 
