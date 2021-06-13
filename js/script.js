@@ -4,8 +4,8 @@ var app = new Vue(
     data: {
       images: [
         {
-          titolo: "archivio",
-          img: "img/archivio.jpeg"
+          titolo: "microscopio",
+          img: "img/bio1.jpg"
         },
         {
           titolo: "book",
@@ -14,6 +14,22 @@ var app = new Vue(
         {
           titolo: "editorial",
           img: "img/polo.png"
+        },
+        {
+          titolo: "microscopio",
+          img: "img/bio2.jpg"
+        },
+        {
+          titolo: "microscopio",
+          img: "img/bio3.jpg"
+        },
+        {
+          titolo: 'commedesgarcon',
+          img: "img/katemoss.jpeg"
+        },
+        {
+          titolo: "microscopio",
+          img: "img/bio4.jpg"
         }
       ],
       position: 0,
