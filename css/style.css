@@ -131,6 +131,7 @@ footer{
 .info ul li{
   margin-bottom: 15px;
   text-transform: capitalize;
+  color: grey;
 }
 
 .newsletter-form{
@@ -181,3 +182,13 @@ footer button{
        margin-left: 70px;
     }
  }
+
+  @media screen and (max-width: 768px){
+    .info{
+      display: block;
+    }
+
+    .newsletter-form{
+      width: 40%;
+    }
+  }
