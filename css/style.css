@@ -184,6 +184,11 @@ footer button{
  }
 
   @media screen and (max-width: 768px){
+    footer{
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+
     .info{
       display: block;
     }
@@ -192,3 +197,21 @@ footer button{
       width: 40%;
     }
   }
+
+@media screen and (max-width: 576px) {
+  header{
+    font-size: 10px;
+  }
+
+  .top-navbar .navbar h1{
+    margin-right: 0px;
+  }
+
+  .top-navbar .navbar:last-of-type{
+    margin-left: 38px;
+  }
+
+  .bottom-navbar .navbar{
+    margin-left: 50px;
+  }
+}
